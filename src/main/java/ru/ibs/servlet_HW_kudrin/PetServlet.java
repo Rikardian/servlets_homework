@@ -2,13 +2,16 @@ package ru.ibs.servlet_HW_kudrin;
 
 import classes.Pet;
 import com.google.gson.Gson;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.*;
-import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/helloServlet")
-public class HelloServlet extends HttpServlet {
+
+@WebServlet("/pet-servlet")
+public class PetServlet extends HttpServlet {
 
     private final Gson gson = new Gson();
 
